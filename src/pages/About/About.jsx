@@ -43,7 +43,7 @@ export default function About() {
             <div className="about-story-content fade-in-right">
               <h2>Our Story</h2>
               <p>
-                Founded in 2010, Sri Dharsan Tours and Travel began with a simple vision — to make 
+                Founded in 2010, Sree Dharsan Tours & Travels began with a simple vision — to make 
                 travel accessible, comfortable, and memorable for everyone. What started as a small 
                 travel desk has grown into one of the most trusted travel agencies in the region.
               </p>

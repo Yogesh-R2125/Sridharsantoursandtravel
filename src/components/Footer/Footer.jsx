@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logo.png';
 import './Footer.css';
 
 const quickLinks = [
@@ -29,8 +30,8 @@ export default function Footer() {
           {/* Company Info */}
           <div className="footer-col">
             <div className="footer-brand">
-              <div className="footer-brand-logo">SD</div>
-              <h3>Sri Dharsan Tours & Travel</h3>
+              <img src={logo} alt="Sree Dharsan Tours & Travels Logo" className="footer-brand-logo-img" />
+              <h3>Sree Dharsan Tours & Travels</h3>
             </div>
             <p>
               Your trusted travel partner for every journey. We provide the best travel
@@ -112,7 +113,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Sri Dharsan Tours and Travel. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Sree Dharsan Tours & Travels. All rights reserved.</p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>

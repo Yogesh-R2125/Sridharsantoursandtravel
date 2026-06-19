@@ -48,6 +48,15 @@
   font-size: 1.1rem;
 }
 
+.chat-avatar-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .chat-user-info h3 {
   color: var(--white);
   font-size: 1.05rem;
@@ -156,6 +165,17 @@
   font-weight: 700;
   flex-shrink: 0;
   box-shadow: var(--shadow-sm);
+}
+
+.chat-bubble-avatar-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
 }
 
 .chat-bubble {

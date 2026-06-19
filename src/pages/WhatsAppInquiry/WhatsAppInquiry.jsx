@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import logo from '../../assets/logo.png';
 import './WhatsAppInquiry.css';
 
 const popularDestinations = ['Munnar', 'Ooty', 'Wayanad', 'Kodaikanal', 'Madurai', 'Rameswaram'];
@@ -20,7 +21,7 @@ export default function WhatsAppInquiry() {
   const chatBodyRef = useRef(null);
 
   const [messages, setMessages] = useState([
-    { id: 'welcome', sender: 'bot', text: 'Hello! Welcome to Sri Dharsan Tours & Travel. 👋' },
+    { id: 'welcome', sender: 'bot', text: 'Hello! Welcome to Sree Dharsan Tours & Travels. 👋' },
     {
       id: 'q-dest',
       sender: 'bot',
@@ -57,7 +58,7 @@ export default function WhatsAppInquiry() {
   const handleReset = () => {
     if (window.confirm('Are you sure you want to restart the booking assistant? This will clear all your answers.')) {
       setMessages([
-        { id: 'welcome', sender: 'bot', text: 'Hello! Welcome to Sri Dharsan Tours & Travel. 👋' },
+        { id: 'welcome', sender: 'bot', text: 'Hello! Welcome to Sree Dharsan Tours & Travels. 👋' },
         {
           id: 'q-dest',
           sender: 'bot',
@@ -266,7 +267,7 @@ export default function WhatsAppInquiry() {
   };
 
   const handleWhatsAppRedirect = () => {
-    const messageText = `*Sri Dharsan Tours & Travel - WhatsApp Booking/Inquiry*
+    const messageText = `*Sree Dharsan Tours & Travels - WhatsApp Booking/Inquiry*
 
 *1. Destination:* ${bookingData.destination}
 *2. Pickup Location:* ${bookingData.pickup}
@@ -307,9 +308,9 @@ _Submitted via WhatsApp Chatbot._`;
             {/* WhatsApp Header */}
             <div className="chat-header">
               <div className="chat-header-left">
-                <div className="chat-avatar">SD</div>
+                <img src={logo} alt="Sree Dharsan Tours & Travels Logo" className="chat-avatar-img" />
                 <div className="chat-user-info">
-                  <h3>Sri Dharsan Tours & Travel</h3>
+                  <h3>Sree Dharsan Tours & Travels</h3>
                   <span className="online-indicator">
                     <span className="dot"></span> Online Assistant
                   </span>
@@ -341,7 +342,7 @@ _Submitted via WhatsApp Chatbot._`;
                   <div key={index} className={`chat-message-bubble-wrapper ${msg.sender}`}>
                     
                     {/* Bot avatar (only for bot messages) */}
-                    {msg.sender === 'bot' && <div className="chat-bubble-avatar">SD</div>}
+                    {msg.sender === 'bot' && <img src={logo} alt="Logo" className="chat-bubble-avatar-img" />}
                     
                     <div className="chat-bubble">
                       <div className="bubble-text">{msg.text}</div>
@@ -442,7 +443,7 @@ _Submitted via WhatsApp Chatbot._`;
                 {/* Typing Indicator Bubble */}
                 {isTyping && (
                   <div className="chat-message-bubble-wrapper bot">
-                    <div className="chat-bubble-avatar">SD</div>
+                    <img src={logo} alt="Logo" className="chat-bubble-avatar-img" />
                     <div className="chat-bubble typing-bubble">
                       <div className="typing-dots">
                         <span></span>

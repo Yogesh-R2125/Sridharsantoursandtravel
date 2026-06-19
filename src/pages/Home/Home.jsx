@@ -134,7 +134,7 @@ export default function Home() {
         <div className="container">
           <div className="about-preview">
             <div className="about-preview-image fade-in-left">
-              <img src="/images/about.png" alt="Sri Dharsan Tours team" />
+              <img src="/images/about.png" alt="Sree Dharsan Tours team" />
               <div className="experience-badge">
                 <span className="number">15+</span>
                 <span className="label">Years of Experience</span>
@@ -143,7 +143,7 @@ export default function Home() {
             <div className="about-preview-content fade-in-right">
               <h2>We Make Your Travel Dreams Come True</h2>
               <p>
-                Sri Dharsan Tours and Travel has been a trusted name in the travel industry 
+                Sree Dharsan Tours & Travels has been a trusted name in the travel industry 
                 for over 15 years. We specialize in creating memorable travel experiences 
                 with a focus on comfort, safety, and customer satisfaction.
               </p>
@@ -230,7 +230,7 @@ export default function Home() {
         <div className="container">
           <div className="section-header fade-in">
             <h2>Why Choose Us</h2>
-            <p>Here's what makes Sri Dharsan Tours and Travel your ideal travel partner.</p>
+            <p>Here's what makes Sree Dharsan Tours & Travels your ideal travel partner.</p>
           </div>
           <div className="why-grid">
             {whyChoose.map((item, i) => (
@@ -249,7 +249,7 @@ export default function Home() {
         <div className="container">
           <div className="section-header fade-in">
             <h2>What Our Customers Say</h2>
-            <p>Hear from travelers who experienced the Sri Dharsan difference.</p>
+            <p>Hear from travelers who experienced the Sree Dharsan difference.</p>
           </div>
           <div className="testimonials-grid">
             {testimonials.map((item, i) => (

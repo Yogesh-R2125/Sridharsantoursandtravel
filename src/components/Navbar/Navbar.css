@@ -47,6 +47,21 @@
   letter-spacing: -0.02em;
 }
 
+.navbar-logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all var(--transition);
+}
+
+.navbar.scrolled .navbar-logo-img {
+  border-color: rgba(30, 58, 95, 0.15);
+  background: transparent;
+}
+
 .navbar-brand-text {
   display: flex;
   flex-direction: column;
