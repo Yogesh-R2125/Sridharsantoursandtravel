@@ -95,7 +95,7 @@ export default function Footer() {
               </div>
               <div className="footer-contact-text">
                 <strong>Phone</strong>
-                +91 98765 43210
+                <a href="tel:+918973488089">+91 89734 88089</a>
               </div>
             </div>
             <div className="footer-contact-item">
@@ -104,7 +104,7 @@ export default function Footer() {
               </div>
               <div className="footer-contact-text">
                 <strong>Email</strong>
-                info@sridharsantours.com
+                <a href="mailto:sridharsantravels@gmail.com">sridharsantravels@gmail.com</a>
               </div>
             </div>
           </div>
