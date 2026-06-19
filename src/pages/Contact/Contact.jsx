@@ -102,8 +102,8 @@ export default function Contact() {
                   </div>
                   <div className="contact-info-text">
                     <h4>Phone</h4>
-                    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                    <p><a href="tel:+919876543211">+91 98765 43211</a></p>
+                    <p><a href="tel:+918973488089">+91 89734 88089</a></p>
+                    <p><a href="tel:+919952560074">+91 99525 60074</a></p>
                   </div>
                 </div>
                 <div className="contact-info-item">
@@ -112,7 +112,7 @@ export default function Contact() {
                   </div>
                   <div className="contact-info-text">
                     <h4>Email</h4>
-                    <p><a href="mailto:info@sridharsantours.com">info@sridharsantours.com</a></p>
+                    <p><a href="mailto:sridharsantravels@gmail.com">sridharsantravels@gmail.com</a></p>
                   </div>
                 </div>
                 <div className="contact-info-item">

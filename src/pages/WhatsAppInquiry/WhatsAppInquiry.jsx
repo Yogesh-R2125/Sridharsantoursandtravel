@@ -176,7 +176,7 @@ export default function WhatsAppInquiry() {
         });
         break;
 
-      case 'PASSENGERS':
+      case 'PASSENGERS': {
         const recommended = getRecommendedVehicle(userAnswer);
         setBookingData(prev => ({ ...prev, passengers: userAnswer, vehicle: recommended.name }));
         setStage('VEHICLE');
@@ -186,6 +186,7 @@ export default function WhatsAppInquiry() {
           options: ['Yes, select this vehicle', 'No, show all vehicles']
         });
         break;
+      }
 
       case 'VEHICLE_SELECT_MANUAL':
         setBookingData(prev => ({ ...prev, vehicle: userAnswer }));
@@ -220,7 +221,7 @@ export default function WhatsAppInquiry() {
         });
         break;
 
-      case 'NAME':
+      case 'NAME': {
         const updatedData = { ...bookingData, name: userAnswer };
         setBookingData(updatedData);
         setStage('SUMMARY');
@@ -230,6 +231,7 @@ export default function WhatsAppInquiry() {
           summaryData: updatedData
         });
         break;
+      }
 
       default:
         break;
