@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import logo from '../../assets/logo.png';
+import { useSEO } from '../../hooks/useSEO';
 import './WhatsAppInquiry.css';
 
 const popularDestinations = ['Munnar', 'Ooty', 'Wayanad', 'Kodaikanal', 'Madurai', 'Rameswaram'];
@@ -19,9 +20,13 @@ const vehiclesList = [
 export default function WhatsAppInquiry() {
   const ref = useScrollReveal();
   const chatBodyRef = useRef(null);
+  useSEO({
+    title: 'Book via WhatsApp Assistant',
+    description: 'Plan your trip using our automated travel assistant chatbot and generate a customized WhatsApp booking format instantly.'
+  });
 
   const [messages, setMessages] = useState([
-    { id: 'welcome', sender: 'bot', text: 'Hello! Welcome to Sree Dharsan Tours & Travels. 👋' },
+    { id: 'welcome', sender: 'bot', text: 'Hello! Welcome to Sri Dharsan Tours and Travels. 👋' },
     {
       id: 'q-dest',
       sender: 'bot',
@@ -58,7 +63,7 @@ export default function WhatsAppInquiry() {
   const handleReset = () => {
     if (window.confirm('Are you sure you want to restart the booking assistant? This will clear all your answers.')) {
       setMessages([
-        { id: 'welcome', sender: 'bot', text: 'Hello! Welcome to Sree Dharsan Tours & Travels. 👋' },
+        { id: 'welcome', sender: 'bot', text: 'Hello! Welcome to Sri Dharsan Tours and Travels. 👋' },
         {
           id: 'q-dest',
           sender: 'bot',
@@ -267,7 +272,7 @@ export default function WhatsAppInquiry() {
   };
 
   const handleWhatsAppRedirect = () => {
-    const messageText = `*Sree Dharsan Tours & Travels - WhatsApp Booking/Inquiry*
+    const messageText = `*Sri Dharsan Tours and Travels - WhatsApp Booking/Inquiry*
 
 *1. Destination:* ${bookingData.destination}
 *2. Pickup Location:* ${bookingData.pickup}
@@ -308,9 +313,9 @@ _Submitted via WhatsApp Chatbot._`;
             {/* WhatsApp Header */}
             <div className="chat-header">
               <div className="chat-header-left">
-                <img src={logo} alt="Sree Dharsan Tours & Travels Logo" className="chat-avatar-img" />
+                <img src={logo} alt="Sri Dharsan Tours and Travels Logo" className="chat-avatar-img" />
                 <div className="chat-user-info">
-                  <h3>Sree Dharsan Tours & Travels</h3>
+                  <h3>Sri Dharsan Tours and Travels</h3>
                   <span className="online-indicator">
                     <span className="dot"></span> Online Assistant
                   </span>

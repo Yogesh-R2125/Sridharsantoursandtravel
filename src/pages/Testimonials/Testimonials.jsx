@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSEO } from '../../hooks/useSEO';
 import './Testimonials.css';
 
 const reviews = [
@@ -15,6 +16,10 @@ const reviews = [
 
 export default function Testimonials() {
   const ref = useScrollReveal();
+  useSEO({
+    title: 'Customer Reviews',
+    description: 'Read testimonials and customer reviews from travelers who booked their custom tours and vehicle rentals with Sri Dharsan Tours and Travels.'
+  });
 
   return (
     <div ref={ref}>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSEO } from '../../hooks/useSEO';
 import './Packages.css';
 
 const packages = [
@@ -55,6 +56,10 @@ const packages = [
 
 export default function Packages() {
   const ref = useScrollReveal();
+  useSEO({
+    title: 'Tour Packages',
+    description: 'Explore our domestic, international, and pilgrimage holiday packages. Customizable travel plans at affordable prices by Sri Dharsan Tours and Travels.'
+  });
 
   return (
     <div ref={ref}>

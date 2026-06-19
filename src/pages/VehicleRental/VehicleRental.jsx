@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSEO } from '../../hooks/useSEO';
 import './VehicleRental.css';
 
 const categories = [
@@ -23,6 +24,10 @@ const pricing = [
 
 export default function VehicleRental() {
   const ref = useScrollReveal();
+  useSEO({
+    title: 'Vehicle Rental & Bookings',
+    description: 'Rent Swift Dzire, Toyota Etios, Innova Crysta, or Tempo Travellers at affordable rates in Coimbatore. Best vehicle hire service for outstation tours by Sri Dharsan Tours and Travels.'
+  });
   const [formData, setFormData] = useState({
     name: '', phone: '', email: '', vehicle: '', pickup: '', dropoff: '', date: '', message: ''
   });

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSEO } from '../../hooks/useSEO';
 import './Gallery.css';
 
 const galleryImages = [
@@ -29,6 +30,10 @@ export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [lightbox, setLightbox] = useState(null);
   const ref = useScrollReveal();
+  useSEO({
+    title: 'Travel Gallery',
+    description: 'Browse photos of beautiful travel destinations like Munnar, Ooty, Wayanad, and Kerala organized by Sri Dharsan Tours and Travels.'
+  });
 
   const filtered = activeFilter === 'all' ? galleryImages : galleryImages.filter(img => img.category === activeFilter);
 

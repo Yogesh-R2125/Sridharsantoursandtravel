@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSEO } from '../../hooks/useSEO';
 import './Contact.css';
 
 export default function Contact() {
   const ref = useScrollReveal();
+  useSEO({
+    title: 'Contact Us',
+    description: 'Get in touch with Sri Dharsan Tours and Travels. Contact us via phone +91 89734 88089, email, or WhatsApp to book your next tour package.'
+  });
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '', email: '', phone: '', subject: '', message: ''
