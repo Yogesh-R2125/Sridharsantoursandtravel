@@ -17,7 +17,7 @@ const vehiclesList = [
 
 export default function WhatsAppInquiry() {
   const ref = useScrollReveal();
-  const chatEndRef = useRef(null);
+  const chatBodyRef = useRef(null);
 
   const [messages, setMessages] = useState([
     { id: 'welcome', sender: 'bot', text: 'Hello! Welcome to Sri Dharsan Tours & Travel. 👋' },
@@ -91,7 +91,12 @@ export default function WhatsAppInquiry() {
 
   // Auto-scroll to bottom of chat
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (chatBodyRef.current) {
+      chatBodyRef.current.scrollTo({
+        top: chatBodyRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
   }, [messages, isTyping]);
 
   const addMessage = (sender, text, extra = {}) => {
@@ -330,7 +335,7 @@ _Submitted via WhatsApp Chatbot._`;
             </div>
 
             {/* Chat Body Area */}
-            <div className="chat-body-container">
+            <div ref={chatBodyRef} className="chat-body-container">
               <div className="chat-messages-list">
                 {messages.map((msg, index) => (
                   <div key={index} className={`chat-message-bubble-wrapper ${msg.sender}`}>
@@ -447,8 +452,6 @@ _Submitted via WhatsApp Chatbot._`;
                     </div>
                   </div>
                 )}
-
-                <div ref={chatEndRef} />
               </div>
             </div>
 
