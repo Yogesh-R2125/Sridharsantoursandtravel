@@ -347,7 +347,7 @@ _Submitted via WhatsApp Chatbot._`;
                   <div key={index} className={`chat-message-bubble-wrapper ${msg.sender}`}>
                     
                     {/* Bot avatar (only for bot messages) */}
-                    {msg.sender === 'bot' && <img src={logo} alt="Logo" className="chat-bubble-avatar-img" />}
+                    {msg.sender === 'bot' && <img src={logo} alt="Sri Dharsan Tours and Travels Logo" className="chat-bubble-avatar-img" />}
                     
                     <div className="chat-bubble">
                       <div className="bubble-text">{msg.text}</div>
@@ -448,7 +448,7 @@ _Submitted via WhatsApp Chatbot._`;
                 {/* Typing Indicator Bubble */}
                 {isTyping && (
                   <div className="chat-message-bubble-wrapper bot">
-                    <img src={logo} alt="Logo" className="chat-bubble-avatar-img" />
+                    <img src={logo} alt="Sri Dharsan Tours and Travels Logo" className="chat-bubble-avatar-img" />
                     <div className="chat-bubble typing-bubble">
                       <div className="typing-dots">
                         <span></span>
